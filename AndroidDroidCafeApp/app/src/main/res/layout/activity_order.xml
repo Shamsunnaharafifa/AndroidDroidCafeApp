@@ -23,6 +23,14 @@
 
     </com.google.android.material.textview.MaterialTextView>
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/level_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="name_level_text_view,address_level_text_view,phone_level_text_view,note_level_text_view"
+        />
+
    <com.google.android.material.textview.MaterialTextView
        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
        android:id="@+id/name_level_text_view"
@@ -35,12 +43,14 @@
        android:layout_marginTop="@dimen/_24sdp"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@id/order_text_view"
+
        >
 
    </com.google.android.material.textview.MaterialTextView>
 
     <com.google.android.material.textfield.TextInputEditText
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/name_level_edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_8sdp"
@@ -48,13 +58,168 @@
         android:ems="10"
         android:hint="@string/name_label_edit_text"
         android:inputType="textPersonName"
-        android:textSize="@dimen/_20ssp"
+        android:textSize="@dimen/_16ssp"
         app:layout_constraintBaseline_toBaselineOf="@id/name_level_text_view"
-        app:layout_constraintStart_toEndOf="@id/name_level_text_view"
-        app:layout_constraintTop_toBottomOf="@id/order_text_view">
+        app:layout_constraintTop_toBottomOf="@id/order_text_view"
+        app:layout_constraintStart_toEndOf="@+id/level_barrier"
+        >
 
     </com.google.android.material.textfield.TextInputEditText>
 
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/address_level_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address_label_text"
+        android:textSize="@dimen/_20ssp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_level_text_view"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/address_level_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:ems="10"
+        android:hint="@string/address_label_edit_text"
+        android:inputType="textMultiLine"
+        android:textSize="@dimen/_16ssp"
+        android:drawableStart="@drawable/ic_address"
+        app:layout_constraintBaseline_toBaselineOf="@id/address_level_text_view"
+        app:layout_constraintTop_toBottomOf="@id/name_level_edit_text"
+        app:layout_constraintStart_toEndOf="@+id/level_barrier"
+        >
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/phone_level_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_label_text"
+        android:textSize="@dimen/_20ssp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_level_text_view"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/phone_level_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:ems="10"
+        android:hint="@string/phone_label_edit_text"
+        android:inputType="phone"
+        android:textSize="@dimen/_16ssp"
+        android:drawableStart="@drawable/ic_phone_android"
+        app:layout_constraintBaseline_toBaselineOf="@id/phone_level_text_view"
+        app:layout_constraintTop_toBottomOf="@id/address_level_edit_text"
+        app:layout_constraintStart_toEndOf="@+id/level_barrier"
+        >
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/note_level_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_label_text"
+        android:textSize="@dimen/_20ssp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_level_text_view"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/note_level_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:ems="10"
+        android:hint="@string/note_label_edit_text"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textSize="@dimen/_16ssp"
+        android:drawableStart="@drawable/ic_note"
+        app:layout_constraintBaseline_toBaselineOf="@id/note_level_text_view"
+        app:layout_constraintTop_toBottomOf="@id/phone_level_edit_text"
+        app:layout_constraintStart_toEndOf="@+id/level_barrier"
+        >
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/delivery_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_20ssp"
+        android:text="@string/delivery_label_text"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_level_text_view"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delivery_text_view"
+        >
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/same_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/same_day_messenger_service_text"
+            android:onClick="onRadioButtonClicked"
+            />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/next_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_messenger_service_text"
+            android:onClick="onRadioButtonClicked"
+            />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/pick_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_up_service_text"
+            android:onClick="onRadioButtonClicked"
+            />
+
+
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
