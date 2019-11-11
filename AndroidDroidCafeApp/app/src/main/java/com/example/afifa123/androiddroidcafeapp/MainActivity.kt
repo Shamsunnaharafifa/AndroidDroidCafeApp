@@ -10,7 +10,7 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
-    public val EXTRA_MESSAGE = "com.example.android.droidcafe.extra.MESSAGE"
+    private var EXTRA_MESSAGE = "com.example.android.droidcafe.extra.MESSAGE"
     private lateinit var mOrderMessage:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
