@@ -51,7 +51,7 @@ class OrderActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         level_spinner.setSelection(position)
-        
+
     }
 }
 
