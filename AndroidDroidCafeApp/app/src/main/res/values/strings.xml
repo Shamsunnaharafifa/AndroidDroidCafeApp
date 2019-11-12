@@ -20,4 +20,11 @@
     <string name="same_day_messenger_service_text">Same day messenger service</string>
     <string name="next_messenger_service_text">Next day messenger service</string>
     <string name="pick_up_service_text">Pick up</string>
+
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Mobile</item>
+        <item>Work</item>
+        <item>Other</item>
+    </string-array>
 </resources>
